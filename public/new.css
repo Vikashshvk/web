@@ -1,0 +1,46 @@
+
+ body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Screen ke beech mein lane ke liye */
+    /* margin: 0; */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Base Button Style */
+.btns {
+    padding: 10px;
+    width: 150px;
+    border-radius: 10px;
+    margin: 10px;
+    border: 2px solid rgb(58, 205, 50); /* Shuru se border rakhein taaki layout na hile */
+    background-color: rgb(53, 205, 50);
+    transition: all 0.3s ease; 
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 1px 5px 10px rgb(31, 31, 30);
+    outline: none;
+    font-size: 20px;
+    color: white;
+}
+
+/* Hover Effect */
+.btns:hover {
+    box-shadow: 1px 5px 15px rgb(8, 109, 7);;
+}
+
+/* Active (Click) Effect - Yahan Background Transparent Hoga */
+.btns:active {
+    background-color: transparent;
+    color: rgb(53, 205, 50);
+    border: 2px solid rgb(53, 205, 50);
+    transform: scale(0.95); /* Button thoda dabega */
+    box-shadow: none;
+}
+

@@ -1,0 +1,78 @@
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: rgb(222, 222, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh
+}
+
+
+#text-type {
+    background-color: rgb(212, 141, 0);
+    color: white;
+    width: 350px;
+    height: 200px;
+    border-radius: 10px;
+    padding: 20px;
+    padding-left:  40px;
+    padding-right: 40px;
+    margin: 5px;
+    position: relative;
+    left: 5px;
+    font-size: 20px;
+    font-weight: 500;   
+}
+
+.post{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.user{
+    margin-top: 40px;
+    height: 40px;
+    width: 300px;
+    border-radius: 10px;
+    background: transparent;
+    padding-left: 10px;
+    border: 2px solid;
+    font-size: 15px;
+    outline: none;
+    font-weight: 500;
+}
+
+.btn {
+    padding: 10px;
+    width: 150px;
+    border-radius: 10px;
+    margin: 10px;
+    border: 2px solid rgb(58, 205, 50); /* Shuru se border rakhein taaki layout na hile */
+    background-color: rgb(53, 205, 50);
+    transition: all 0.3s ease; 
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 1px 5px 10px rgb(31, 31, 30);
+    outline: none;
+    font-size: 20px;
+    color: white;
+}
+
+/* Hover Effect */
+.btn:hover {
+    box-shadow: 1px 5px 15px rgb(8, 109, 7);;
+}
+
+/* Active (Click) Effect - Yahan Background Transparent Hoga */
+.btn:active {
+    background-color: transparent;
+    color: rgb(53, 205, 50);
+    border: 2px solid rgb(53, 205, 50);
+    transform: scale(0.95); /* Button thoda dabega */
+    box-shadow: none;
+}
