@@ -1,58 +1,75 @@
-
-*{
+* {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-body{
+
+body {
     background-color: rgb(222, 222, 255);
+}
+
+/* Poore form ko screen ke center mein lane ke liye wrapper */
+.post-wrapper {
     display: flex;
     justify-content: center;
-    align-items: center; 
-    height: 100vh
-}
-
-
-#text-type {
-    background-color: rgb(212, 141, 0);
-    color: white;
-    width: 350px;
-    height: 200px;
-    border-radius: 10px;
+    align-items: center;
+    min-height: 80vh; /* Navbar aur footer ke beech center karega */
+    width: 100%;
     padding: 20px;
-    padding-left:  40px;
-    padding-right: 40px;
-    margin: 5px;
-    position: relative;
-    left: 5px;
-    font-size: 20px;
-    font-weight: 500;   
 }
 
-.post{
+/* Main Form Card */
+.post-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: rgba(241, 186, 113, 0.969);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px; /* Mobile par automatic adjust hoga, bade screen par isse zyada nahi failega */
 }
 
-.user{
-    margin-top: 40px;
+/* Username Field */
+.user {
     height: 40px;
-    width: 300px;
+    width: 100%; /* Form container ke hisab se 100% responsive */
     border-radius: 10px;
     background: transparent;
     padding-left: 10px;
-    border: 2px solid;
+    border: 2px solid #555;
     font-size: 15px;
     outline: none;
     font-weight: 500;
+    resize: none;
 }
 
-.btn {
+/* Description Field */
+#text-type {
+    background-color: rgb(212, 141, 0);
+    color: white;
+    width: 100%; /* 100% Responsive width */
+    height: 200px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    font-size: 20px;
+    font-weight: 500;   
+    resize: none;
+    outline: none;
+    border: none;
+}
+
+/* Submit Button */
+.sub {
     padding: 10px;
     width: 150px;
     border-radius: 10px;
-    margin: 10px;
-    border: 2px solid rgb(58, 205, 50); /* Shuru se border rakhein taaki layout na hile */
+    margin-top: 5px;
+    border: 2px solid rgb(58, 205, 50);
     background-color: rgb(53, 205, 50);
     transition: all 0.3s ease; 
     cursor: pointer;
@@ -63,16 +80,14 @@ body{
     color: white;
 }
 
-/* Hover Effect */
-.btn:hover {
-    box-shadow: 1px 5px 15px rgb(8, 109, 7);;
+.sub:hover {
+    box-shadow: 1px 5px 15px rgb(8, 109, 7);
 }
 
-/* Active (Click) Effect - Yahan Background Transparent Hoga */
-.btn:active {
-    background-color: transparent;
-    color: rgb(53, 205, 50);
-    border: 2px solid rgb(53, 205, 50);
-    transform: scale(0.95); /* Button thoda dabega */
+.sub:active {
+    background-color: transparent !important;
+    color: rgb(53, 205, 50) !important;
+    border: 2px solid rgb(53, 205, 50) !important;
+    transform: scale(0.95);
     box-shadow: none;
 }

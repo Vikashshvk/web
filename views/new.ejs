@@ -1,21 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/new.css">
-</head>
-<body>
+<% layout("/layouts/boilerplate") %>
+<link rel="stylesheet" href="/new.css">
 
-    <form method="post" action="/posts/">
-        <input type="text" name="username" placeholder="Enter Username" >
-        <br> <br>
-        <textarea name="content" id="text-type" placeholder="Enter About your content" ></textarea>
-        <br>
+<div class="post-wrapper">
+    <form class="post-form" method="POST" action="/posts" enctype="multipart/form-data">
+        
+        <input class="username-input" type="text" name="username" placeholder="Enter Username" required>
+        
+        <div class="file-upload-wrapper">
+            <input type="file" name="imageFile" id="file-input">
+        </div>
+        
+        <textarea class="description-input" name="description" placeholder="Enter About your content"></textarea>
+        
         <button class="btns">Post</button>
     </form>
-    
-</body>
-</html>
+</div>

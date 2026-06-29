@@ -1,18 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/style.css">
-</head>
+<% layout("/layouts/boilerplate") %>
 <body>
 
-   <div class="post">
-    <p> post id <%=post.id %> </p>
-               <h3>@<%=post.username%> </h3>
-               <h3><%=post.content%> </h3>  
-            </div>   
-    
+  <div class="container my-5 d-flex justify-content-center">
+    <div class="card shadow-sm l-card" style="max-width: 600px; width: 100%;">
+      
+      <img src="<%= post.image.url %>" class="card-img-top" alt="Post Image" style="max-height: 400px; object-fit: cover;">
+      
+      <div class="card-body">
+        <h4 class="card-title text-primary">@<%= post.username %></h4>
+        
+        <p class="text-muted" style="font-size: 0.85rem;">
+          <strong>Post ID:</strong> <%= post._id %>
+        </p>
+        <hr>
+        
+        <p class="card-text fs-5 text-dark mb-4">
+          <%= post.description %>
+        </p>
+        
+        <div class="d-flex gap-2">
+          <a href="/posts/<%= post._id %>/edit" class="btn btn-primary px-4">
+            <i class="fa-solid fa-pen-to-square me-1"></i> Edit Post
+          </a>
+          
+          <a href="/posts" class="btn btn-outline-secondary px-4">
+            Back to Home
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 </body>
-</html>
